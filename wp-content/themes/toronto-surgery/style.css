@@ -1,0 +1,1277 @@
+/*
+Theme Name: Toronto Surgery
+Theme URI: http://torontosurgery.ca
+Author: Strategic Search Solutions Canada
+Author URI: http://strategicsearchsolutions.ca
+Description: Description
+Version: 1.0-wpcom
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: toronto-surgery
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ Toronto Surgery is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/*CSS*/
+
+/* FONTS */
+@font-face
+{
+font-family: Barmeno;
+src: url(fonts/Barmeno.ttf);
+}
+@font-face
+{
+font-family: Open Sans Regular;
+src: url(fonts/OpenSans-Regular.ttf);
+}
+@font-face
+{
+font-family: Open Sans Bold;
+src: url(fonts/OpenSans-Bold.ttf);
+}
+@font-face
+{
+font-family: Open Sans Light;
+src: url(fonts/OpenSans-Light.ttf);
+}
+
+/* clearfix begin */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.clear{clear: both;}
+/* clearfix end */
+
+
+/* Main CSS */
+
+html{font-family: Open Sans Regular;}
+
+a{text-decoration: none;}
+
+h1, h2, h3, h4, h5{font-family: Barmeno; font-weight: normal; line-height: 1.4em;}
+
+img{outline: none; border: 0;}
+
+*{outline: none; transition: 0.2s;
+-khtml-transition: 0.2s;
+-webkit-transition: 0.2s;
+-moz-transition: 0.2s;
+color: #353D40;
+}
+
+body{margin: 0; padding: 0;}
+
+/* Header */
+header#masthead{margin: 0; padding: 0; }
+
+.branding{padding: 0 5% 0 5%; height: 152px; background: url("images/toronto-surgery-header-bg.gif") center repeat-x; position: relative; z-index: 999;}
+.brand{float: left;}
+a.logo{outline: none; float: left; margin-top: 17px;}
+h1.site-title{-webkit-font-smoothing: subpixel-antialiased;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5); color: #fff; font-weight: normal; display: inline-block; padding:  15px 0 0 15px;}
+h1.site-title span{display: block; color: #fff;}
+.request-consult{float: right; padding-top: 40px; width: 400px;}
+.request-consult aside{float: right; }
+
+span.req-num{float: right; color: #fff; font-size: 1.3em; display: block; margin-bottom: 8px; font-family: Open Sans Light; }
+span.req-num strong a{font-family: Open Sans Bold; color: #fff; -webkit-font-smoothing: subpixel-antialiased;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3); font-weight: normal; }
+
+.fb-like{float: left; margin-top: 5px;}
+.fb-like:hover{opacity: 0.7;}
+
+.fb-recommend{float: left; width: 179px; height: 32px; background: url("images/home-page-fb-recommend.png") no-repeat; float: left; margin: 12px 0 0 15px;}
+
+.header-mailto{float: left; margin: 0 0 0 15px;}
+.header-mailto:hover{opacity: 0.7;}
+
+/* Navigation */ 
+nav#main-nav{position: relative; z-index: 998;background: #909ea9; padding: 0 5% 0 5%; -webkit-box-shadow: 0px -3px 7px 6px rgba(0, 0, 0, 0.54);
+-moz-box-shadow:    0px -3px 7px 6px rgba(0, 0, 0, 0.54);
+box-shadow:         0px -3px 7px 6px rgba(0, 0, 0, 0.54); }
+nav#main-nav ul{float: left; list-style-type: none; margin: 0; padding: 0;}
+nav#main-nav ul li{float: left; font-family: Arial; text-transform: uppercase; color: #fff; font-weight: bold; font-size: 0.9em;}
+nav#main-nav ul li a{text-decoration: none; display: inline-block; padding: 23px 15px 23px 15px; color: #fff;}
+nav#main-nav ul li a:hover{opacity: 0.5;}
+
+
+a.tour-clinic-cta{text-decoration: none; color: #fff; text-transform: uppercase; font-family: Arial; font-weight: bold; font-size: 0.9em; 
+
+padding: 8px 12px 8px 12px;
+
+background: #e60057; /* Old browsers */
+background: -moz-linear-gradient(top,  #e60057 0%, #9c003a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e60057), color-stop(100%,#9c003a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #e60057 0%,#9c003a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60057', endColorstr='#9c003a',GradientType=0 ); /* IE6-9 */
+
+border-radius: 6px;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+-khtml-border-radius: 6px;
+-o-border-radius: 6px;
+
+border: 2px solid #fff;
+
+float: right; 
+margin-top: 13px;
+
+
+
+}
+
+a.tour-clinic-cta:hover{
+
+background: #e60057; /* Old browsers */
+background: -moz-linear-gradient(top,  #e60057 0%, #e60057 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e60057), color-stop(100%,#e60057)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e60057 0%,#e60057 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e60057 0%,#e60057 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e60057 0%,#e60057 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #e60057 0%,#e60057 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60057', endColorstr='#e60057',GradientType=0 ); /* IE6-9 */
+
+
+
+}
+
+
+/*  ---------------------------------------- HOME PAGE TEMPLATE CSS ---------------------------------------------  */
+
+/* Homepage Slider */
+
+#slider{width: 100%; height: 436px;  background: #BACBDB; }
+
+.slide{padding: 0 18% 0 18%;}
+
+
+.slide-text{padding-top: 16%;}
+.slide-text h1{padding: 0; color: #fff; font-family: Open Sans Regular; font-size: 2.6em; font-weight: normal; margin: 0;
+	text-shadow: 0 1px 0px #A8B8C6;
+}
+.slide-text p{color: #353d40; font-size: 1.1em;}
+.slide-text a{text-decoration: none; font-family: Arial; font-weight: bold; font-size: 1.5em; color: #fff;
+padding: 6px 12px 8px 12px;
+
+background: #e60057; /* Old browsers */
+background: -moz-linear-gradient(top,  #e60057 0%, #9c003a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e60057), color-stop(100%,#9c003a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #e60057 0%,#9c003a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60057', endColorstr='#9c003a',GradientType=0 ); /* IE6-9 */
+
+border-radius: 6px;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+-khtml-border-radius: 6px;
+-o-border-radius: 6px;
+
+display: inline-block;
+margin-top: 30px;
+
+opacity: 0.9
+}
+
+.slide-text a:hover{ background: #e60057; /* Old browsers */
+background: -moz-linear-gradient(top,  #e60057 0%, #e60057 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e60057), color-stop(100%,#e60057)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e60057 0%,#e60057 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e60057 0%,#e60057 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e60057 0%,#e60057 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #e60057 0%,#e60057 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60057', endColorstr='#e60057',GradientType=0 ); /* IE6-9 */}
+
+.slide1{height: 436px; background: #bcccdc url("images/home-slider-tummy-tuck-full.jpg") center no-repeat;}
+
+
+/* Procedures Home */
+
+div.procedures-home{background: #353d40; padding: 2% 5% 2% 5%;}
+div.procedures-home h1{display: block; padding: 0 20% 0 20%; margin: 0; color: #fff; font-weight: normal; text-align: center; font-size: 2.3em;}
+div.procedures-home .procedure-bubbles{display: block; width: 70%;  margin: 3% 15% 0 15%;}
+div.procedures-home .procedure-bubbles a{width: 24.4%; display: inline-block; }
+div.procedures-home .procedure-bubbles a:hover{}
+div.procedures-home .procedure-bubbles a img{display:block; margin:auto; border: 4px solid #616469;
+
+background: #616469;
+
+border-radius: 50%;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-khtml-border-radius: 50%;
+-o-border-radius: 50%;
+
+}
+
+
+div.procedures-home .procedure-bubbles a img:hover{border: 4px solid #fff;
+background: #fff;
+
+}
+
+span.or{color: #fff; text-align: center; display: block; margin: 30px 0 30px 0; font-size: 1.1em;}
+
+div.home-procedures-cta{display: block; width: 700px; margin: 0 auto;}
+
+
+
+div.dashed-arrow-left{width: 155px; height: 84px; background: url("images/dashed-arrow-left-home.jpg") center no-repeat; float: left;}
+div.home-procedures-cta a{float: left; display: inline-block; text-decoration: none; font-family: Arial; font-weight: bold; font-size: 1.5em; color: #fff;
+padding: 22px 30px 22px 30px; text-transform: uppercase;
+
+background: #e60057; /* Old browsers */
+background: -moz-linear-gradient(top,  #e60057 0%, #9c003a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e60057), color-stop(100%,#9c003a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #e60057 0%,#9c003a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60057', endColorstr='#9c003a',GradientType=0 ); /* IE6-9 */
+
+border-radius: 8px;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+-khtml-border-radius: 8px;
+-o-border-radius: 8px;
+margin: 7px 20px 0 20px;
+
+opacity: 0.9;
+ }
+
+div.home-procedures-cta a:hover{opacity: 1;} 
+ 
+div.home-procedures-cta:hover div.dashed-arrow-left{margin-right: -20px; margin-left: 20px; transition: 0.2s;
+-khtml-transition: 0.2s;
+-webkit-transition: 0.2s;
+-moz-transition: 0.2s;}
+div.home-procedures-cta:hover div.dashed-arrow-right{margin-left: -20px; margin-right: 20px; transition: 0.2s;
+-khtml-transition: 0.2s;
+-webkit-transition: 0.2s;
+-moz-transition: 0.2s;} 
+ 
+div.dashed-arrow-right{width: 154px; height: 83px; background: url("images/dashed-arrow-right-home.jpg") center no-repeat; float: left; padding-top: 1px;}
+
+
+.mobile-hori-bar{width:50%; border-top: 1px solid #95a2ad; margin: 0 auto; display: none;}
+
+/* Martin Bio Home */
+
+#martin-bio-home{color: #3f484e; height: 564px; background: #fff url("images/home-page-bio-bg.jpg") center no-repeat;  padding: 0 10% 0 10%;}
+
+@media all and (min-width: 1310px){
+	
+	.bio-home-text{float: left; width: /*642px;*/ 62%; }
+	
+}
+
+
+
+
+img.martin-pic-home{float: left; margin: 48px 0px 0 3%; }
+.bio-home-text h1{margin: 70px 0 10px 0; font-weight: normal; font-family: Open Sans Light; font-size: 2.3em;}
+.bio-home-text h1 strong{font-family: Open Sans Bold;}
+
+.bio-home-text span{font-size: 0.8em; line-height: 2em;}
+
+.bio-home-text ul{padding: 20px 0 0 0; list-style-type: none; margin: 0;}
+.bio-home-text ul li {line-height: 1.7em; background: url("images/martin-bio-checks.png") left 0% no-repeat; padding: 0px 12px 12px 30px;}
+
+
+.martin-bio-home-cta{}
+
+a.full-bio-cta{
+text-decoration: none; font-family: Arial; font-weight: bold; font-size: 0.9em; color: #fff;
+padding: 12px 12px 12px 12px; text-transform: uppercase; display: inline-block; margin-top: 15px; float: left;
+
+background: #4d565c; /* Old browsers */
+background: -moz-linear-gradient(top,  #4d565c 0%, #010302 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4d565c), color-stop(100%,#010302)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4d565c 0%,#010302 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4d565c 0%,#010302 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4d565c 0%,#010302 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4d565c 0%,#010302 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d565c', endColorstr='#010302',GradientType=0 ); /* IE6-9 */
+
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-khtml-border-radius: 5px;
+-o-border-radius: 5px;
+margin-right: 17px;
+}
+
+
+a.full-bio-cta:hover{
+
+background: #4d565c; /* Old browsers */
+background: -moz-linear-gradient(top,  #4d565c 0%, #4d565c 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4d565c), color-stop(100%,#4d565c)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4d565c 0%,#4d565c 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4d565c 0%,#4d565c 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4d565c 0%,#4d565c 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4d565c 0%,#4d565c 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d565c', endColorstr='#4d565c',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+a.schedule-cta{
+text-decoration: none; font-family: Arial; font-weight: bold; font-size: 0.9em; color: #fff;
+padding: 12px 12px 12px 12px; text-transform: uppercase; display: inline-block; margin-top: 15px; float: left;
+
+background: #eb015a; /* Old browsers */
+background: -moz-linear-gradient(top,  #eb015a 0%, #9d0039 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb015a), color-stop(100%,#9d0039)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eb015a 0%,#9d0039 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb015a', endColorstr='#9d0039',GradientType=0 ); /* IE6-9 */
+
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-khtml-border-radius: 5px;
+-o-border-radius: 5px;
+
+}
+
+a.schedule-cta:hover{
+
+background: #eb015a; /* Old browsers */
+background: -moz-linear-gradient(top,  #eb015a 0%, #eb015a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb015a), color-stop(100%,#eb015a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eb015a 0%,#eb015a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb015a', endColorstr='#eb015a',GradientType=0 ); /* IE6-9 */
+
+ }
+
+/* Certified by */
+
+#cert-by{border-top: 1px solid #d8d8d8; padding: 2% 5% 1% 8%; position: relative;}
+.cert-by-header{width: 218px; height :42px; background: url("images/certified-by-head.png") no-repeat; position: absolute;  z-index: 998; margin-top: -41px; margin-left: 19%;}
+.cert-by-header h3{font-weight: normal; font-size: 2em; margin: 0; display: block; padding: 11px 0 0 52px; color: #333;}
+
+
+.certs{margin-top: 0;}
+.certs div{width: 24.83%;  float: left; }
+.certs div img{display:block; margin:auto;}
+
+
+/* Home Page B/A*/
+
+#home-page-befnaft{background: #353d40; padding:1% 5% 1% 5%;}
+#home-page-befnaft h1{font-size: 2.4em; color: #fff; text-align: center; margin: 0; font-weight: normal;}
+img.befnaft-home{display: block; margin: 0 auto; margin-top: 3px;}
+
+a.befnaft-cta{ text-decoration: none; font-family: Arial; font-weight: bold; font-size: 1.5em; color: #fff;
+padding: 22px 30px 22px 30px; text-transform: uppercase; display: block; width: 460px; margin: 10px auto;
+
+background: #e60057; /* Old browsers */
+background: -moz-linear-gradient(top,  #e60057 0%, #9c003a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e60057), color-stop(100%,#9c003a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e60057 0%,#9c003a 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #e60057 0%,#9c003a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60057', endColorstr='#9c003a',GradientType=0 ); /* IE6-9 */
+
+border-radius: 8px;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+-khtml-border-radius: 8px;
+-o-border-radius: 8px;
+
+opacity: 0.9;
+
+}
+
+.befnaft-home-vertical{display: none;}
+
+a.befnaft-cta:hover{opacity: 1; }
+
+/* Featured In */
+
+div#featured-in{  padding: 0;  }
+div#featured-in h1{color: #353d40; text-align: center; font-size: 3em; margin: 15px 0 0 0;}
+
+ul.featured-links{list-style-type: none; display: block; padding: 0;}
+
+
+
+
+@media all and (min-width: 1322px){
+
+	.feat-clear{clear: both;}
+
+	ul.featured-links section{ float: center; width: 1322px; display: block; margin: 0 auto;}
+	
+	ul.featured-links section.feat-sec-1{display: block; }
+	
+	ul.featured-links section.feat-sec-1 li a{padding: 0 1% 0 1%;}
+	
+	ul.featured-links section.feat-sec-2{padding:  0;}
+	
+	ul.featured-links section.feat-sec-2 li a{padding: 6.5%;}
+
+	ul.featured-links li{float: left; }
+	
+	
+
+	/*--*/
+	ul.featured-links li.etalk a{width: 153px; height: 125px; display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-e-talk.jpg") center no-repeat;}
+	ul.featured-links li.etalk a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-e-talk-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.ctvnews a{width: 171px; height: 124px; display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-ctv-news-bnw.jpg") center no-repeat;}
+	ul.featured-links li.ctvnews a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-ctv-news-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.globaltoronto a{width: 185px; height: 124px; display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-global-toronto.jpg") center no-repeat;}
+	ul.featured-links li.globaltoronto a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-global-toronto-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.muchmusic a{width: 162px; height: 123px; display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-much-music.jpg") center no-repeat;}
+	ul.featured-links li.muchmusic a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-much-music-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.theglobeandmail a{width: 112px; height: 124px; display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-the-globe-and-mail.jpg") center no-repeat;}
+	ul.featured-links li.theglobeandmail a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-the-globe-and-mail-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.thestar a{width: 216px; height: 124px; display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-the-star.jpg") center no-repeat;}
+	ul.featured-links li.thestar a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-the-star-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.nationalpost a{width: 280px; height: 124px; display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-national-post.jpg") center no-repeat;}
+	ul.featured-links li.nationalpost a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-national-post-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.ufc a{width: 182px; height: 134px; display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-ufc.jpg") center no-repeat;}
+	ul.featured-links li.ufc a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-ufc-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.newstalk1010 a{width: 95px; height: 133px; display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-newstalk-1010.jpg") center no-repeat;}
+	ul.featured-links li.newstalk1010 a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-newstalk-1010-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.elevate a{width: 188px; height: 134px; display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-elevate.jpg") center no-repeat;}
+	ul.featured-links li.elevate a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-elevate-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.deepbody a{width: 148px; height: 134px; display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-deep-body.jpg") center no-repeat;}
+	ul.featured-links li.deepbody a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-deep-body-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.more a{width: 158px; height: 134px; display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-more.jpg") center no-repeat;}
+	ul.featured-links li.more a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-more-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.news680 a{width: 154px; height: 134px; display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-680-news.jpg") center no-repeat;}
+	ul.featured-links li.news680 a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-680-news-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.ratemd a{width: 224px; height: 134px; display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-top-doctor.jpg") center no-repeat;}
+	ul.featured-links li.ratemd a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-top-doctor-colored.jpg") center no-repeat;}
+
+}
+
+
+@media all and (max-width: 1322px){
+
+	ul.featured-links li{float: left; width: 25%;}
+	
+	ul.featured-links li a{width: 100%; height: 134px;}
+
+	/*--*/
+	ul.featured-links li.etalk a{display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-e-talk.jpg") center no-repeat;}
+	ul.featured-links li.etalk a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-e-talk-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.ctvnews a{display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-ctv-news-bnw.jpg") center no-repeat;}
+	ul.featured-links li.ctvnews a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-ctv-news-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.globaltoronto a{display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-global-toronto.jpg") center no-repeat;}
+	ul.featured-links li.globaltoronto a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-global-toronto-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.muchmusic a{display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-much-music.jpg") center no-repeat;}
+	ul.featured-links li.muchmusic a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-much-music-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.theglobeandmail a{display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-the-globe-and-mail.jpg") center no-repeat;}
+	ul.featured-links li.theglobeandmail a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-the-globe-and-mail-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.thestar a{display: inline-block;  background: url("images/featured-in/torontosurgery-home-page-featured-in-the-star.jpg") center no-repeat;}
+	ul.featured-links li.thestar a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-the-star-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.nationalpost a{display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-national-post.jpg") center no-repeat;}
+	ul.featured-links li.nationalpost a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-national-post-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.ufc a{display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-ufc.jpg") center no-repeat;}
+	ul.featured-links li.ufc a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-ufc-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.newstalk1010 a{display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-newstalk-1010.jpg") center no-repeat;}
+	ul.featured-links li.newstalk1010 a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-newstalk-1010-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.elevate a{display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-elevate.jpg") center no-repeat;}
+	ul.featured-links li.elevate a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-elevate-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.deepbody a{display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-deep-body.jpg") center no-repeat;}
+	ul.featured-links li.deepbody a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-deep-body-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.more a{display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-more.jpg") center no-repeat;}
+	ul.featured-links li.more a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-more-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.news680 a{display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-680-news.jpg") center no-repeat;}
+	ul.featured-links li.news680 a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-680-news-colored.jpg") center no-repeat;}
+	/*--*/
+	ul.featured-links li.ratemd a{display: inline-block; background: url("images/featured-in/torontosurgery-home-page-featured-in-top-doctor.jpg") center no-repeat;}
+	ul.featured-links li.ratemd a:hover{background: url("images/featured-in/torontosurgery-home-page-featured-in-top-doctor-colored.jpg") center no-repeat;}
+
+}
+/* TEAM SECTION HOME */
+
+#team-section{height: 653px; background: url("images/home-team-section-bg.jpg") repeat-x; padding: 1% 5% 1% 5%;}
+
+.kim-bio{width: 50%; float: left; ;}
+.kim-bio img{float: left; border: 5px solid #d9dadc;}
+#team-section h1{color: #464646; font-size: 2em; font-family: Open Sans Regular; font-weight: normal; }
+.kim-bio h3{margin: 0; font-family: Open Sans Regular; font-weight: normal; color: #e00058; font-size: 1.4em;}
+.kim-bio p{color: #464646;}
+.kim-bio aside{float: left; width: 60%; padding-left: 30px;}
+.kim-bio a{text-decoration: none; font-family: Arial; font-weight: bold; font-size: 0.9em; color: #fff;
+padding: 15px 25px 15px 25px; text-transform: uppercase; display: inline-block; margin-top: 7px; float: left;
+
+background: #eb015a; /* Old browsers */
+background: -moz-linear-gradient(top,  #eb015a 0%, #9d0039 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb015a), color-stop(100%,#9d0039)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eb015a 0%,#9d0039 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb015a', endColorstr='#9d0039',GradientType=0 ); /* IE6-9 */
+
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-khtml-border-radius: 5px;
+-o-border-radius: 5px;}
+
+.kim-bio a:hover{
+background: #eb015a; /* Old browsers */
+background: -moz-linear-gradient(top,  #eb015a 0%, #eb015a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb015a), color-stop(100%,#eb015a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eb015a 0%,#eb015a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb015a', endColorstr='#eb015a',GradientType=0 ); /* IE6-9 */
+}
+
+/* min 1151px */
+
+@media all and (min-width: 1151px){
+	.kim-bio a {margin-top: 31px;}
+}
+
+
+.blog-posts-home{width: 49%; float: left; margin-left: 1%;  }
+
+/* Home page map */
+
+.map-home{width: 100%; margin-top: -28px;}
+.home-page-map{position: relative;}
+.our-location{width: 400px; position: absolute; background: #fff; margin-left: 5%; margin-top: 1%; -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.14);
+-moz-box-shadow:    0px 0px 2px 1px rgba(0, 0, 0, 0.14);
+box-shadow:         0px 0px 2px 1px rgba(0, 0, 0, 0.14); padding: 2%;  color: #353d40;}
+
+.our-location h1{margin: 0; font-family: Open Sans Regular;}
+.our-loc-sec1{border-bottom: 1px solid #d5d5d5; font-size: 0.8em;}
+.our-location p{font-family: Open Sans Regular;  display: inline-block; width: 60%; }
+.our-location img{ margin-left: 1%;}
+
+.our-loc-sec2{font-size: 1em; }
+.our-loc-sec2 .leftp{font-weight: bold; width: 49%; text-align: left;}
+.our-loc-sec2 .rightp{width: 49%; text-align: right;}
+
+.our-loc-sec3 .leftp{font-weight: bold; width: 49%; text-align: left;}
+.our-loc-sec3 .rightp{width: 49%; text-align: right;}
+
+.our-loc-sec4 a{text-decoration: none; font-family: Arial; font-weight: bold; font-size: 0.9em; color: #fff;
+padding: 15px 20px 15px 20px; text-transform: uppercase; display: inline-block; margin-top: 15px; float: left;
+
+background: #eb015a; /* Old browsers */
+background: -moz-linear-gradient(top,  #eb015a 0%, #9d0039 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb015a), color-stop(100%,#9d0039)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eb015a 0%,#9d0039 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb015a', endColorstr='#9d0039',GradientType=0 ); /* IE6-9 */
+
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-khtml-border-radius: 5px;
+-o-border-radius: 5px;}
+
+
+.our-loc-sec4 a:hover{background: #eb015a; /* Old browsers */
+background: -moz-linear-gradient(top,  #eb015a 0%, #eb015a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb015a), color-stop(100%,#eb015a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eb015a 0%,#eb015a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb015a', endColorstr='#eb015a',GradientType=0 ); /* IE6-9 */}
+
+
+
+.our-loc-num{ width: 47%; float: left;}
+.our-loc-num img{ display: inline-block; padding-top: 22px; padding-left: 15px;}
+.our-loc-num span a{font-size: 1.2em;  line-height: 1em; display: inline-block; padding: 0; font-weight: normal; padding-left: 53px; margin-top: -29px; background: #fff; color: #353D40; font-family: Open Sans Regular;}
+.our-loc-num span a:hover{background: none;}
+
+/*  ---------------------------------------- HOME PAGE TEMPLATE CSS END ---------------------------------------------  */
+
+
+/*---------- HOME PAGE CONTENT ------------- */
+
+#content{padding: 1% 5% 5% 5%;}
+
+#content h1, h2, h3, h4, h5{color: #C40054;}
+
+#content a:hover{text-decoration: underline;}
+
+#primary{width: 75%; float: left;}
+#secondary{width: 25%; float: left; margin-top: 1%;}
+
+/* POSTS */
+h1.entry-title{font-size: 2em;}
+
+.blog-posts-home .aside-img{float: left; width: 30%; padding: 2%;}
+.blog-posts-home .aside-img img{
+
+	border-radius: 112.5px;
+	-khtml-border-radius: 112.5px;
+	-ms-border-radius: 112.5px;
+	-o-ms-border-radius: 112.5px;
+	-moz-border-radius: 112.5px;
+	-webkit-border-radius: 112.5px;
+	border: 5px solid #D9DADC;
+}
+
+
+
+.blog-posts-home .aside-img img:hover{
+
+	transform:rotate(-25deg);
+	-ms-transform:rotate(-25deg); /* IE 9 */
+	-webkit-transform:rotate(-25deg); /* Opera, Chrome, and Safari */
+
+}
+
+.aside-content{width:65%; float: left;}
+.aside-content h3 a{color: #e5185a;}
+.aside-content h3 a:hover{margin-left: 20px;}
+.aside-content p{font-size: 0.8em;}
+
+a.post-readmore{color: #e5185a; font-size: 0.9em; font-weight: bold; font-style: italic; text-align: right; display: block; width: 95%; padding-right: 0;}
+a.post-readmore:hover{font-style: normal;}
+
+
+
+
+.read-all{text-decoration: none; font-family: Arial; font-weight: bold; font-size: 0.9em; color: #fff;
+padding: 15px 25px 15px 25px; text-transform: uppercase; display: inline-block; margin-top: 0px; margin-left: 34%; float: left;
+
+background: #eb015a; /* Old browsers */
+background: -moz-linear-gradient(top,  #eb015a 0%, #9d0039 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb015a), color-stop(100%,#9d0039)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eb015a 0%,#9d0039 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eb015a 0%,#9d0039 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb015a', endColorstr='#9d0039',GradientType=0 ); /* IE6-9 */
+
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-khtml-border-radius: 5px;
+-o-border-radius: 5px;}
+
+.read-all:hover{
+background: #eb015a; /* Old browsers */
+background: -moz-linear-gradient(top,  #eb015a 0%, #eb015a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb015a), color-stop(100%,#eb015a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eb015a 0%,#eb015a 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eb015a 0%,#eb015a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb015a', endColorstr='#eb015a',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* Footer */
+
+.footer-links{background: #353d40; padding: 5% 5% 3% 5%; margin-top: -10px;}
+
+.footer-links *{}
+
+.footer-links h3{margin: 0; color: #fff;}
+.footer-links aside{float: left; width: 10.119047619%; padding-left: 4.16666666667%;}
+.footer-links aside ul{list-style-type: none; margin: 0; padding: 20px 0 0 0;}
+.footer-links aside ul li a{color: #caced1; text-decoration: none; font-size: 0.8em; }
+.footer-links aside ul li a:hover{text-decoration: underline;}
+
+span.copyright{color: #717679; font-size: 0.8em; text-align: center; display: block; margin: 1%;}
+
+
+
+/* MOBILE NAVIGATION CSS */
+
+nav#mobile-navigation{background: #363d40; padding: 25px 3% 25px 3%; position: relative; display: none;}
+.mob-nav-btn{padding-left: 50px; width: 8%; height: 21px; background: url("images/mobile/home-mobile-menu-icon.gif") left no-repeat; margin: 0 auto; cursor: pointer; }
+.mob-nav-btn h1{margin: 0; line-height: 0.99em; color: #fff; text-transform: uppercase; font-family: Arial; font-weight: normal;}
+.mob-nav-arrow{width: 36px; height: 18px; background: url("images/mobile/home-menu-arrow-darkgrey.gif"); position: absolute; margin: 25px 0 0 45%;}
+
+
+
+/* 1310px */
+
+@media all and (max-width: 1310px){
+	.bio-home-text{float: left; width: /*642px;*/ 65%; }
+	.bio-home-text h1{margin: 70px 0 10px 0; }
+	#martin-bio-home{padding: 0 5% 0 5%;}
+	.cert-by-header{margin-left: 14%;}
+}
+
+/* 1274px */
+
+@media all and (max-width: 1274px){
+	.bio-home-text{float: left; width: /*642px;*/ 60%; }
+	.bio-home-text h1{margin: 70px 0 10px 0; }
+	#martin-bio-home{padding: 0 5% 0 5%;}
+	.cert-by-header{margin-left: 14%;}
+}
+
+/* 1216px */
+
+
+
+/* ------------------IF SCREEN IS 1216px WIDE---------------------------- */
+
+@media all and (max-width: 1216px){
+	
+	.bio-home-text{float: left; width: /*642px;*/ 63%; }
+	.bio-home-text h1{margin: 70px 0 10px 0; }
+	#martin-bio-home{padding: 0 5% 0 5%;}
+	.cert-by-header{margin-left: 14%;}
+	
+	
+	.bio-home-text ul li{line-height: 1.6em; font-size: 0.92em; }
+	
+	.kim-bio aside{font-size: 0.95em;}
+	
+	ul.featured-links li{float: left; width: 24%;}
+
+	ul.featured-links li a{width: 100%; }
+}
+
+
+/* 1200px */
+
+@media all and (max-width: 1200px){
+	.bio-home-text{float: left; width: /*642px;*/ 60%; }
+	.bio-home-text h1{margin: 70px 0 10px 0; }
+}
+
+
+/*---IF SCREEN IS 1170px WIDE---*/
+
+@media all and (max-width: 1170px){
+	a.tour-clinic-cta:hover{margin-right: 0; border: 2px solid #3d3d3d;}
+	.bio-home-text h1 strong{display: block;}
+	div.procedures-home .procedure-bubbles{display: block; width: 90%;  margin: 3% 5% 0 5%;}
+	.bio-home-text ul li{line-height: 1.2em; font-size: 0.8em;}
+}
+
+/* ------------------IF SCREEN IS 1150px WIDE---------------------------- */
+
+@media all and (max-width: 1150px){
+	
+	.bio-home-text{float: left; width: /*642px;*/ 52%; }
+	.bio-home-text h1{margin: 40px 0 10px 0; }
+	
+	
+
+	.kim-bio aside{font-size: 0.95em;}
+	
+	
+}
+
+/* ------------------IF SCREEN IS 1135px WIDE---------------------------- */
+
+@media all and (max-width: 1135px){
+	#team-section{height: auto; margin-bottom: 28px; padding-bottom: 5%; background: #fafafa; 
+
+	-moz-box-shadow:    inset 0  40px 40px -40px rgba(0, 0, 0, 0.24), 
+                        inset 0 -40px 40px -40px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: inset 0  40px 40px -40px rgba(0, 0, 0, 0.24), 
+                        inset 0 -40px 40px -40px rgba(0, 0, 0, 0.24);
+     box-shadow:        inset 0  40px 40px -40px rgba(0, 0, 0, 0.24), 
+                        inset 0 -40px 40px -40px rgba(0, 0, 0, 0.24);
+	
+/*-webkit-box-shadow: inset 0px -3px 40x 6px rgba(0, 0, 0, 0.24);
+-moz-box-shadow: inset 0px -3px 40px 6px rgba(0, 0, 0, 0.24);
+box-shadow: inset 0px -3px 40px 6px rgba(0, 0, 0, 0.24);
+*/
+}
+	.kim-bio{ width: 100%; display: block;}
+	.kim-bio a:hover{margin-left: 15px; margin-top: 7px;}
+	.kim-bio aside{font-size: 0.9em; width: 77%;}
+	.blog-posts-home{ width: 100%; display: block; margin-top: 5px; margin-left: 0; }
+	
+	.home-blog-posts{width: 100%; display: block; float: left;}
+	
+	.read-all{margin-left: 40%; }
+	.read-all:hover{margin-left: 40%;}
+	
+	.blog-posts-home .aside-img{width: 20%;}
+	.blog-posts-home .aside-content{width: 75%; padding-top: 30px;}
+}
+
+/* ------------------IF SCREEN IS 1111px WIDE---------------------------- */
+
+@media all and (max-width: 1111px){
+	a.tour-clinic-cta{font-size: 0.7em; 
+	padding: 6px 10px 6px 10px; margin-top: 17px;}
+}
+
+/* ------------------IF SCREEN IS 1087px WIDE---------------------------- */
+
+@media all and (max-width: 1087px){
+	a.tour-clinic-cta{font-size: 0.7em; display: none;}
+	.bio-home-text{float: right; width: 550px;  }
+	#martin-bio-home{ padding: 0 3% 0 3%;}
+	
+	.bio-home-text{float: left; width: /*642px;*/ 60%; }
+	.bio-home-text h1{margin: 70px 0 10px 0; }
+}
+
+
+/* 1058px */
+
+@media all and (max-width: 1058px){
+	.bio-home-text{float: left; width: /*642px;*/ 57%; }
+	.bio-home-text h1{margin: 60px 0 10px 0; }
+	
+}
+
+/* ------------------IF SCREEN IS 1020px WIDE---------------------------- */
+
+@media all and (max-width: 1020px){
+	.bio-home-text{float: left; width: /*642px;*/ 55%; }
+	.bio-home-text h1{margin: 40px 0 10px 0; }
+	.bio-home-text ul li{ font-size: 0.8em; }
+}
+
+/*-----START MOBILE CSS-----------*/
+
+/* ------------------IF SCREEN IS 1000px WIDE---------------------------- */
+
+@media all and (max-width: 1000px){
+
+	header#masthead{margin: 0; padding: 0; }
+	nav#mobile-navigation{display: block;}
+	.branding{padding: 0 5% 0 5%; height: 152px; background: url("images/toronto-surgery-header-bg.gif") bottom center repeat-x; position: relative; z-index: 999;}
+	.brand{float: left; width: 100%; display: block;}
+	a.logo{outline: none; float: left; margin-top: 17px;}
+	h1.site-title{color: #fff; font-size: 2.7em; font-weight: normal; display: inline-block; padding:  15px 0 0 15px; text-align: center;  width: 80%;}
+	h1.site-title span{display: inline-block; }
+	.request-consult{float: left; width: 100%; margin-top: -80px;}
+	.request-consult aside{float: right; display: none;}
+
+	span.req-num{font-family: Open Sans Light; float: none; color: #fff; font-size: 1.3em; display: block; margin-bottom: 8px; text-align: center; }
+	
+	/* Navigation */ 
+	nav#main-nav{display: none;}
+	
+	#slider{display: none;}
+	
+	/* procedures */
+	div.procedures-home{background: none; padding: 0; padding-bottom: 60px;}
+	div.procedures-home h1{margin: 0; color: #fff; font-weight: normal; text-align: center; font-size: 2.3em; background: #909ea9; display: block; padding: 5%}
+	div.procedures-home .procedure-bubbles{display: block; width: 90%;  margin: 3% 5% 0 5%;}
+	div.procedures-home .procedure-bubbles a{width: 24.4%; display: inline-block;  }
+	div.procedures-home .procedure-bubbles a:hover{transform: none;
+	-ms-transform: none; /* IE 9 */
+	-webkit-transform: none; /* Opera, Chrome, and Safari */}
+	div.procedures-home .procedure-bubbles a img{display:block; margin:auto;}
+
+	span.or{color: #7f7f84; text-align: center; display: block; margin: 30px 0 30px 0; font-size: 1.2em;}
+
+	div.home-procedures-cta{display: block; width: 90%; margin: 0 auto; }
+
+		div.home-procedures-cta a{float: none; text-align: center; width: 87%;}
+	div.home-procedures-cta a:hover{opacity: 1;}
+	
+	.procedures-arrow{width: 40px; height: 18px; background: url(images/mobile/home-menu-arrow-lightgrey.gif); margin: 0 auto;}
+
+	div.dashed-arrow-left{display: none;}
+	div.dashed-arrow-right{display: none;}
+	
+	.mobile-hori-bar{display: block;}
+	
+	
+	/* Martin Bio Home */
+
+	#martin-bio-home{margin-bottom: 50px; color: #3f484e; background: #fff url("images/mobile/martin-bio-bg.jpg") top left no-repeat;  padding: 0 3% 15% 3%;}
+
+
+	.bio-home-text{float: right; width: 100%; }
+	.bio-home-text section{padding-left: 25%;}
+	img.martin-pic-home{display: none;}
+	.bio-home-text h1{margin:25px 0 10px 0; font-weight: normal; font-family: Open Sans Regular; font-size: 2em;}
+	.bio-home-text h1 strong{display: inline-block;}
+	
+	.bio-home-text span{font-size: 1em; line-height: 2em;}
+	.martin-desc{width: 100%; display: block; margin-top: 100px;}
+
+	.bio-home-text ul{padding: 20px 0 0 50px; list-style-type: none; margin: 0;}
+	.bio-home-text ul li {font-size: 1em; line-height: 1.7em; background: url("images/martin-bio-checks.png") left 0% no-repeat; padding: 0px 12px 12px 30px;}
+	
+
+	.martin-bio-home-cta{padding: 3% 0 0 20%; margin-bottom: 50px;}
+
+	a.full-bio-cta{
+	text-decoration: none;  font-size: 1.3em; padding: 3%;
+	}
+
+
+	a.full-bio-cta:hover{margin-top: 25px; }
+
+
+	a.schedule-cta{font-size: 1.3em; 
+	padding: 3% ; }
+	
+	
+	/* Certified by */
+
+	#cert-by{border-top: 1px solid #d8d8d8; padding: 3% 5% 2% 5%; position: relative;}
+	.cert-by-header{width: 90%; height: 100px; text-align: center; position: relative; background: none;  z-index: 998; margin-top: 10px; margin-left: 5%; float: left;}
+	.cert-by-header h3{font-weight: normal; font-size: 3em; margin: 0; display: block; padding: 0 0 50px 0; color: #363e40;}
+
+
+	.certs{   padding: 0;}
+	.certs div{width: 49.83%;  float: left; }
+	.certs div img{display:block; margin:auto;}
+	
+	/* TEAM */
+	
+	.kim-bio{ width: 100%; display: block; margin-bottom: 50px; position: relative;}
+	
+	.kim-bio aside{font-size: 0.9em; width: 67%;}
+	.blog-posts-home{ width: 100%; display: block; margin-top: 5px; margin-left: 0; }
+	
+	/* MAP */
+	
+	#home-page-map{display: none;}
+	
+	/* Footer */
+	#main-footer{margin-top: -28px;}
+	
+	.footer-links{background: #353d40; padding: 5% 5% 0 5%;  }
+
+	.footer-links h3{margin: 0; color: #fff;}
+	.footer-links aside{float: left; width: 20.8333333333%; padding-left: 4.16666666667%; height: 300px;}
+	.footer-links aside ul{list-style-type: none; margin: 0; padding: 20px 0 0 0;}
+	.footer-links aside ul li a{color: #caced1; text-decoration: none; font-size: 0.8em; }
+	.footer-links aside ul li a:hover{text-decoration: underline;}
+
+	span.copyright{color: #717679; font-size: 0.8em; text-align: center; display: block; margin: 1%;}
+
+}
+
+/* 912px */
+
+@media all and (max-width: 912px){
+	ul.featured-links li{float: left; width: 33.33333%;}
+
+	ul.featured-links li a{width: 100%; }
+	
+	.blog-posts-home .aside-img{width: 30%;}
+	.blog-posts-home .aside-content{width: 65%; padding-top: 30px;}
+
+}
+
+
+/* 865px */
+
+@media all and (max-width: 865px){
+
+	h1.site-title{font-size: 2.4em;}
+	span.req-num{font-size: 1em;}
+	a.logo img{width: 98px; height: 94px;}
+	.request-consult{margin-top: -60px;}
+
+}
+
+
+/* 795px */
+
+@media all and (max-width: 795px){
+	
+	.kim-bio a{margin-left: -195px; position: absolute;}
+	.kim-bio a:hover{margin-left: -195px;}
+	
+	/* procedures */
+	div.procedures-home{background: none; padding: 0; padding-bottom: 60px;}
+	div.procedures-home h1{margin: 0; color: #fff; font-weight: normal; text-align: center; font-size: 2.3em; background: #909ea9; display: block; padding: 5%}
+	div.procedures-home .procedure-bubbles{display: block; width: 90%;  margin: 3% 10% 0 10%;}
+	div.procedures-home .procedure-bubbles a{width: 44.4%; display: inline-block; margin-bottom: 10%; }
+	ul.featured-links li{float: left; width: 45%;}
+
+	ul.featured-links li a{width: 100%; }
+} 	
+
+
+/* 751px */
+
+@media all and (max-width: 751px){
+	
+	h1.site-title{font-size: 2.2em;}
+	.bio-home-text h1{font-size: 1.7em;}
+	.bio-home-text section{padding-left: 30%;}
+	.martin-desc{width: 100%; display: block; margin-top: 10px;}
+
+}
+
+/* 695px */
+
+@media all and (max-width: 695px){
+	h1.site-title{font-size: 2em;}
+	.kim-bio aside{font-size: 0.9em; width: 57%;}
+	.kim-bio a{margin-top: -50px;}
+	.kim-bio a:hover{margin-top: -50px;}
+	.martin-bio-home-cta{padding: 3% 0 0 15%; margin-bottom: 50px;}
+}
+	
+
+/* 645px */
+
+@media all and (max-width: 645px){
+	a.logo{margin-top: 30px;}
+	h1.site-title{display: none; }
+	span.req-num{font-size: 1.6em;}
+	.request-consult{margin-top: -110px; padding-left: 10%;}
+	.bio-home-text h1{font-size: 1.4em;}
+	.bio-home-text section{padding-left: 35%;}
+	.bio-home-text ul li{font-size: 0.9em;}
+	#martin-bio-home{padding-bottom: 180px;}
+	
+	.kim-bio a{margin-top: -70px;}
+	.kim-bio a:hover{margin-top: -70px;}
+	.martin-bio-home-cta{padding: 3% 0 0 10%; margin-bottom: 50px;}
+	#martin-bio-home{margin-bottom: 50px;  padding: 0 3% 10% 3%;}
+	.read-all{margin-left: 30%;}
+	.read-all:hover{margin-left: 30%;}
+}
+
+/* 620px */
+
+@media all and (max-width: 620px){
+	span.req-num{font-size: 1.4em;}
+	.bio-home-text section{padding-left: 40%;}
+	.bio-home-text ul li{font-size: 0.8em;}
+	
+	.martin-desc{width: 100%; display: block; margin-top: 40px;}
+	#martin-bio-home{margin-bottom: 130px;  padding: 0 3% 15% 3%;}
+	
+	.blog-posts-home .aside-img{width: 100%; display: block;}
+	.blog-posts-home .aside-img img{display: block; margin: auto;}
+	.blog-posts-home .aside-content{width: 100%; display: block; padding-top: 10px;}
+	.blog-posts-home .aside-content h3{text-align: center; font-size: 1.4em;}
+}
+
+/* 575px */
+
+@media all and (max-width: 575px){
+
+
+.request-consult{float: left; width: 90%; margin-top: -110px;}
+	span.req-num{font-size: 1.2em;}
+	.bio-home-text h1{font-size: 1.2em;}
+	.martin-bio-home-cta{padding: 3% 0 0 3%; margin-bottom: 50px;}
+	#martin-bio-home{margin-bottom: 120px;  padding: 0 3% 15% 3%;}
+	.bio-home-text span{font-size: 0.8em;}
+	img.befnaft-home{display: none;}
+	.befnaft-home-vertical{display: block; margin: 20px auto; }
+	
+	a.befnaft-cta{ text-decoration: none; font-family: Arial; font-weight: bold; font-size: 1.2em; color: #fff;
+padding: 22px 30px 22px 30px; text-transform: uppercase; display: block; width: 75%; margin: 10px auto; text-align: center; opacity: 1;}
+
+div#team-section{background: #FAFAFA; border-top: 1px solid #E3E3E3;}
+.kim-bio h1{text-align: center; font-size: 1.2em;}
+	
+	.kim-bio img{display: block; margin: auto; float: none;}
+	
+	.kim-bio aside{width: 100%; padding: 3% 0 0 0; display: block; float: none;}
+	
+	.kim-bio aside h3{text-align: center;}
+	
+	.kim-bio aside a{margin: 20px 0 0 0; text-align: center; width: 92%;}
+	.kim-bio aside a:hover{margin: 20px 0 0 0;}
+	
+	.blog-posts-home h1{text-align: center; font-size: 1.2em;}
+	.blog-posts-home{min-height : 300px; margin-top: 50px;}
+	
+	.read-all{width: 92%; margin-left: 0%; text-align: center;}
+	.read-all:hover{margin-left: 0%;}
+}
+
+/* 547px */
+
+@media all and (max-width: 547px){
+	
+	span.req-num{font-size: 1em;}
+}
+
+/* 533px */
+
+@media all and (max-width: 533px){
+	.martin-bio-home-cta{padding: 3% 0 0 3%; margin-bottom: 50px;}
+	a.full-bio-cta{font-size: 1.2em;}
+	a.schedule-cta{font-size: 1.2em;}
+}
+
+
+/* 480px */
+
+@media all and (max-width: 480px){
+
+	
+	
+	.request-consult{ padding: 0; margin-top: 5px; width: 100%;}
+	a.logo{width: 100%; margin-top: 10px;} 
+	a.logo img{width: 74px; height: 71px; margin: auto; display: block;}
+	
+	span.req-num{float: left; text-align: center; width: 100%; font-size: 1.2em;}
+	span.req-num strong{display: block;}
+	.mob-nav-btn{margin-left: 40%;}
+	nav#mobile-navigation{padding: 15px;}  
+	.mob-nav-arrow{margin: 15px 0 0 43%;}
+	.mob-nav-btn h1{font-size: 1em; line-height: 1.4em;}
+	div.procedures-home h1{font-size: 1.4em; padding: 10% 5% 10% 5%;}
+	
+	/*---------------------------------*/
+	
+	/* procedures */
+	div.procedures-home{background: none; padding: 0; padding-bottom: 60px;}
+	
+	div.procedures-home .procedure-bubbles{display: block; width: 90%;  margin: 3% 10% 0 10%;}
+	div.procedures-home .procedure-bubbles a{width: 90%; display: block; margin-bottom: 10%; }
+	
+	
+	div.home-procedures-cta{display: block; width: 85%; margin: 0;  padding: 0;}
+	div.home-procedures-cta a{float: none; text-align: center; width: 85%; font-size: 1em; padding: 8%;}
+	
+	/*------------------------------------*/
+	#martin-bio-home{margin-bottom: 50px; color: #3f484e; background: #fff url("images/mobile/martin-bio-bg.jpg") 35% 10% no-repeat;  padding: 0 1% 15% 1%;}
+	.bio-home-text{}
+	.bio-home-text h1{font-size: 1.1em; text-align: center; margin-bottom: 425px; }
+	.martin-desc{padding: 1%; margin-top: 20px; width: 95%;}
+	.bio-home-text section{width: 100%; padding-left: 0;}
+	.bio-home-text section span{text-align: center; float: left; display: block; }
+	.bio-home-text ul{padding: 0; margin-top: 50px; }
+	.bio-home-text ul li{font-size: 0.9em; }
+	#martin-bio-home{padding-bottom: 180px;}
+	
+	a.full-bio-cta{font-size: 1em; width: 87%; text-align: center; padding: 5%; margin-top: 5px; }
+	a.schedule-cta{font-size: 1em; width: 87%; text-align: center; padding: 5%; margin-top: 15px; margin-bottom: 25px;}
+	
+	a.full-bio-cta:hover{margin-top: 5px;}
+	a.schedule-cta:hover{margin-top: 15px;}
+	
+	
+	/* Certified by */
+
+	#cert-by{border-top: 1px solid #d8d8d8; padding: 3% 5% 2% 5%; position: relative;}
+	.cert-by-header{width: 90%; height: 100px; text-align: center; position: relative; background: none;  z-index: 998; margin-top: 10px; margin-left: 5%; float: left;}
+	.cert-by-header h3{font-weight: normal; font-size: 2em; margin: 0; display: block; padding: 3% 0 3% 0; color: #363e40; margin: 0;}
+
+
+	.certs{   padding: 0;}
+	.certs div{width: 99.83%; display: block; }
+	.certs div img{display:block; margin:auto;}
+	
+	/* ---- */
+	#home-page-befnaft h1{font-size: 2em; margin: 3%;}
+	
+	/* Featured In */
+	
+	
+	div#featured-in{  padding: 0;}
+	div#featured-in h1{color: #353d40; text-align: center; font-size: 2em; margin: 15px 0 0 0;}
+
+	ul.featured-links{list-style-type: none; display: block; padding: 0; width: 99%; position: relative; margin: 0 auto;}
+	ul.featured-links li{float: none; width: 100%;}
+
+	ul.featured-links li a{width: 100%; }
+
+	/*-----------*/
+	
+	
+	
+	
+	
+	#main-footer .copyright{font-size: 0.7em;}
+	#main-footer aside h3{font-size: 0.9em;}
+	#main-footer aside ul li{font-size: 0.85em;}
+	
+}
+
+/* 435px */
+
+@media all and (max-width: 435px){
+	.kim-bio aside a{margin: 20px 0 0 0; text-align: center; width: 85%;}
+	.read-all{width: 85%}
+	.home-blog-posts{border-bottom: 1px dotted #E30157; padding: 30px 0 30px 0;}
+	.footer-links aside{float: left; width: 29.1666666667%; padding-left: 4.16666666667%; height: 300px;}
+}
+
+
+/* 320px */
+
+@media all and (max-width: 320px){
+
+	.mob-nav-btn{margin-left: 32%;}
+	nav#mobile-navigation{padding: 15px;}  
+	.mob-nav-arrow{margin: 15px 0 0 40%;}
+	.kim-bio aside a{margin: 20px 0 0 0; text-align: center; width: 82%;}
+	
+	.read-all{width: 82%}
+	
+	
+}
